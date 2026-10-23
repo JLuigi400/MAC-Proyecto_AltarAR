@@ -33,8 +33,9 @@ struct PantallaContenedor: View {
                     pantallaActual = .menu
                 }
             case .creditos:
-                PantallaCreditosSimple P
-                pantallaActual = .menu
+                PantallaCreditosSimples {
+                    pantallaActual = .menu
+                }
             case .realidadAumentada:
                 PantallaARBase {
                     pantallaActual = .menu
