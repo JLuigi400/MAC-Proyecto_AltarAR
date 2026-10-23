@@ -60,3 +60,15 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output
+
+# Archivos personales de macOS
+.DS_Store
+
+# Estado local de Xcode
+xcuserdata/
+*.xcuserstate
+*.xcscmblueprint
+DerivedData/
+
+# Estado local de Reality Composer Pro
+*.rcuserdata
