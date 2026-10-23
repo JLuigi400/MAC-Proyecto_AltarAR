@@ -36,9 +36,3 @@ struct PantallaCreditosSimples: View {
         .foregroundStyle(Color("texto_principal"))
     }
 }
-
-#Preview {
-    NavigationStack {
-        PantallaCreditosSimples()
-    }
-}
