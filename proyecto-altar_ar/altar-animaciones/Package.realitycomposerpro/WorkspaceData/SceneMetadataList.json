@@ -1,4 +1,35 @@
 {
+  "02C9F452-ED0E-424D-B699-3F124E8EDDEC" : {
+    "objectMetadataList" : [
+      [
+        "02C9F452-ED0E-424D-B699-3F124E8EDDEC",
+        "Root"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "02C9F452-ED0E-424D-B699-3F124E8EDDEC",
+        "Root",
+        "Timeline"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "02C9F452-ED0E-424D-B699-3F124E8EDDEC",
+        "Root",
+        "Timeline",
+        "Track"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      }
+    ]
+  },
   "B37A6274-1843-46C2-9A65-FCFBED345E28" : {
     "objectMetadataList" : [
       [

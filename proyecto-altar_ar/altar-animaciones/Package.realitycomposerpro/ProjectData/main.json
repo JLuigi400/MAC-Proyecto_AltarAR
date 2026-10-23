@@ -1,9 +1,11 @@
 {
   "pathsToIds" : {
-    "\/altar-animaciones\/Sources\/altar-animaciones\/altar-animaciones.rkassets\/Scene.usda" : "B37A6274-1843-46C2-9A65-FCFBED345E28"
+    "\/altar-animaciones\/Sources\/altar-animaciones\/altar-animaciones.rkassets\/Scene.usda" : "B37A6274-1843-46C2-9A65-FCFBED345E28",
+    "altar-animaciones\/Sources\/altar-animaciones\/altar-animaciones.rkassets\/Scene.usda" : "02C9F452-ED0E-424D-B699-3F124E8EDDEC"
   },
   "projectID" : -4101847262536487367,
   "uuidToIntID" : {
+    "02C9F452-ED0E-424D-B699-3F124E8EDDEC" : -4438257208564473054,
     "B37A6274-1843-46C2-9A65-FCFBED345E28" : -2807875856559212536
   }
 }
