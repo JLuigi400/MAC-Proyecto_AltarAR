@@ -42,7 +42,6 @@ struct PantallaCreditos: View {
         .background(Color("fondo").ignoresSafeArea())
         .foregroundStyle(Color("texto_principal"))
         .navigationTitle("Créditos")
-        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
