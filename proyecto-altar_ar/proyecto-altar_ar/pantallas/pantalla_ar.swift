@@ -18,7 +18,7 @@ struct PantallaARBase: View {
             #if os (iOS)
             VistaARBase()
                 .clipShape(RoundedRectangle(cornerRadius: 18))
-                .frame(CGSize(height: 360))
+                .frame(CGSize(width: .infinity, height: 360))
             
             Text("Busca una superficie horizontal. Por ahora aparecerá un cubo naranja; después")
                 .multilineTextAlignment(.center)

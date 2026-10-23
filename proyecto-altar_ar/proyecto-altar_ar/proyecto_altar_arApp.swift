@@ -12,7 +12,7 @@ struct proyecto_altar_arApp: App {
     
     var body: some Scene {
         WindowGroup {
-            PantallaInicio()
+            PantallaContenedor()
         }
     }
 }

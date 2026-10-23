@@ -46,8 +46,3 @@ struct PantallaInicio: View {
         
     }
 }
-
-#Preview {
-    PantallaInicio { }
-        .preferredColorScheme(.dark)
-}
