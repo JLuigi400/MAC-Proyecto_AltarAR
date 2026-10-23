@@ -14,9 +14,22 @@
 		FBA1BC86308657E200CBFED4 /* proyecto-altar_ar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "proyecto-altar_ar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		FB5A0B12308904CA000AB780 /* Exceptions for "proyecto-altar_ar" folder in "proyecto-altar_ar" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"proyecto-altar-ar-Info.plist",
+			);
+			target = FBA1BC85308657E200CBFED4 /* proyecto-altar_ar */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		FBA1BC88308657E200CBFED4 /* proyecto-altar_ar */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				FB5A0B12308904CA000AB780 /* Exceptions for "proyecto-altar_ar" folder in "proyecto-altar_ar" target */,
+			);
 			path = "proyecto-altar_ar";
 			sourceTree = "<group>";
 		};
@@ -263,6 +276,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "proyecto-altar-ar-Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "SE USARA PARA MOSTRAR MODELOS EN AR";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -308,6 +322,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "proyecto-altar-ar-Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "SE USARA PARA MOSTRAR MODELOS EN AR";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
