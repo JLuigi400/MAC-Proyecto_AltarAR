@@ -27,16 +27,16 @@ def Xform "Root"
         {
             uniform token info:id = "RealityKit.AnimationLibrary"
 
-            def RealityKitAnimationFile "Mesa_Laboratorio_animacion_A_Close"
-            {
-                uniform asset file = @animaciones/Mesa_Laboratorio-animacion-A_Close.usdz@
-                uniform string name = "Mesa_Laboratorio-animacion-A_Close"
-            }
-
             def RealityKitAnimationFile "Mesa_Laboratorio_animacion_A_Open"
             {
                 uniform asset file = @animaciones/Mesa_Laboratorio-animacion-A_Open.usdz@
                 uniform string name = "Mesa_Laboratorio-animacion-A_Open"
+            }
+
+            def RealityKitAnimationFile "Mesa_Laboratorio_animacion_G_Open"
+            {
+                uniform asset file = @animaciones/Mesa_Laboratorio-animacion-G_Open.usdz@
+                uniform string name = "Mesa_Laboratorio-animacion-G_Open"
             }
 
             def RealityKitAnimationFile "Mesa_Laboratorio_animacion_G_Close"
@@ -45,10 +45,10 @@ def Xform "Root"
                 uniform string name = "Mesa_Laboratorio-animacion-G_Close"
             }
 
-            def RealityKitAnimationFile "Mesa_Laboratorio_animacion_G_Open"
+            def RealityKitAnimationFile "Mesa_Laboratorio_animacion_A_Close"
             {
-                uniform asset file = @animaciones/Mesa_Laboratorio-animacion-G_Open.usdz@
-                uniform string name = "Mesa_Laboratorio-animacion-G_Open"
+                uniform asset file = @animaciones/Mesa_Laboratorio-animacion-A_Close.usdz@
+                uniform string name = "Mesa_Laboratorio-animacion-A_Close"
             }
         }
     }
