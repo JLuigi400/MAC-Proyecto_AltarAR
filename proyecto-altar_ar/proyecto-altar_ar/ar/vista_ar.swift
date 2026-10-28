@@ -1,41 +1,95 @@
-//
-//  vista_ar.swift
-//  proyecto-altar_ar
-//
-//  Created by Iris Gabriela Perales Ortiz on 23/10/26.
-//
-
 import SwiftUI
 
-// Esto es para revisar si se esta viendo desde un celular o tableta
 #if os(iOS)
 import ARKit
 import RealityKit
 import UIKit
 
-/// Esta vista solo se compila en el destino iPhone/iPad
-/// El cubo naranja confirma que la cámara y ARKit funcionan.
-/// Más adelante se cambiará por el modelo de la mesa.
-
-struct VistaARBase: UIViewRepresentable {
+// Requiere dos recursos dentro del target de la aplicación:
+// 1. Assets.xcassets > AR Resource Group llamado "ImagenesAltarAR".
+// 2. mesa_altar_base_estatica.usdz.
+//
+// La imagen de referencia debe imprimirse y colocarse horizontalmente.
+struct VistaARPorImagen: UIViewRepresentable {
     func makeUIView(context: Context) -> ARView {
-        let VistaAR = ARView(frame: .zero)
+        let vistaAR = ARView(frame: .zero)
         let configuracion = ARWorldTrackingConfiguration()
-        configuracion.planeDetection = [.horizontal]
-        VistaAR.session.run(configuracion)
-        
-        let ancla = AnchorEntity(plane: .horizontal)
-        let material = SimpleMaterial(color: .systemOrange, isMetallic: true)
-        let cubo = ModelEntity(mesh: .generateBox(size: 0.10), materials: [material])
-        
-        cubo.position.y = 0.05
-        ancla.addChild(cubo)
-        VistaAR.scene.addAnchor(ancla)
-        
-        return VistaAR
-    }
-    
-    func updateUIView(_ uiView: ARView, context: Context) { }
-}
 
+        guard let imagenes = ARReferenceImage.referenceImages(
+            inGroupNamed: "AR_Images",
+            bundle: .main
+        ), !imagenes.isEmpty else {
+            print("No se encontró el grupo AR 'AR_Images'.")
+            return vistaAR
+        }
+
+        configuracion.detectionImages = imagenes
+        configuracion.maximumNumberOfTrackedImages = 1
+        vistaAR.session.delegate = context.coordinator
+        context.coordinator.vistaAR = vistaAR
+        context.coordinator.cargarAltar()
+        vistaAR.session.run(configuracion)
+
+        return vistaAR
+    }
+
+    func updateUIView(_ uiView: ARView, context: Context) { }
+
+    func makeCoordinator() -> Coordinador {
+        Coordinador()
+    }
+
+    final class Coordinador: NSObject, ARSessionDelegate {
+        weak var vistaAR: ARView?
+        private var altar: Entity?
+        private var anclasColocadas = Set<UUID>()
+
+        func cargarAltar() {
+            Task { @MainActor [weak self] in
+                do {
+                    let modelo = try await Entity(
+                        named: "Mesa_Laboratorio",
+                        in: .main
+                    )
+                    modelo.scale = SIMD3<Float>(repeating: 0.7)
+                    self?.altar = modelo
+                    print("Altar cargado. Apunta la cámara a la imagen guía.")
+                } catch {
+                    print("No se pudo cargar mesa_altar_base_estatica.usdz: \(error)")
+                }
+            }
+        }
+
+        func session(_ session: ARSession, didAdd anchors: [ARAnchor]) {
+            for case let imagenAncla as ARImageAnchor in anchors {
+                DispatchQueue.main.async { [weak self] in
+                    self?.colocarAltar(sobre: imagenAncla)
+                }
+            }
+        }
+
+        private func colocarAltar(sobre imagenAncla: ARImageAnchor) {
+            guard let vistaAR, let altar,
+                  !anclasColocadas.contains(imagenAncla.identifier) else {
+                return
+            }
+
+            let ancla = AnchorEntity(anchor: imagenAncla)
+            let copia = altar.clone(recursive: true)
+
+            // El eje vertical de una imagen de referencia es su eje Z.
+            // Esta rotación deja la mesa de pie sobre una imagen impresa
+            // colocada horizontalmente.
+            copia.orientation = simd_quatf(
+                angle: .pi / 2,
+                axis: SIMD3<Float>(1, 0, 0)
+            )
+            copia.position.z = 0.01
+
+            ancla.addChild(copia)
+            vistaAR.scene.addAnchor(ancla)
+            anclasColocadas.insert(imagenAncla.identifier)
+        }
+    }
+}
 #endif

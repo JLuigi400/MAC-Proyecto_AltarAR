@@ -16,7 +16,7 @@ struct PantallaARBase: View {
                 .font(.custom("Bangers", size: 32, relativeTo: .title))
             
             #if os (iOS)
-            VistaARBase()
+            VistaARPorImagen()
                 .clipShape(RoundedRectangle(cornerRadius: 18))
             
             Text("Busca una superficie horizontal. Por ahora aparecerá un cubo naranja; después")
