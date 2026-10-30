@@ -87,7 +87,7 @@ struct VistaARPorImagen: UIViewRepresentable {
             
             copia.orientation = simd_quatf(
                 angle: .pi / 2,
-                axis: SIMD3<Float>(0, 0, 0) // Cambiando la posicion en -1 o 0 en el primer digito, rota la posicion X del Modelo
+                axis: SIMD3<Float>(-1, 0, 0) // Cambiando la posicion en -1 o 0 en el primer digito, rota la posicion X del Modelo
             )
             copia.scale = SIMD3<Float>(repeating: 0.30)
             copia.position.z = 0.01
