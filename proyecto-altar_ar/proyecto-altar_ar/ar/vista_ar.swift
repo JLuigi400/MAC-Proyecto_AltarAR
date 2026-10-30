@@ -62,6 +62,7 @@ struct VistaARPorImagen: UIViewRepresentable {
         
         func session(_ session: ARSession, didAdd anchors: [ARAnchor]) {
             for case let imagenAncla as ARImageAnchor in anchors {
+                print("Imagen detectada: \(imagenAncla.referenceImage.name)")
                 DispatchQueue.main.async { [weak self] in
                     self?.colocarAltar(sobre: imagenAncla)
                 }
@@ -69,26 +70,21 @@ struct VistaARPorImagen: UIViewRepresentable {
         }
         
         private func colocarAltar(sobre imagenAncla: ARImageAnchor) {
-            guard let vistaAR, let altar,
-                  !anclasColocadas.contains(imagenAncla.identifier) else {
+            guard let vistaAR else { return }
+            
+            let ancla = AnchorEntity(anchor: imagenAncla)
+            
+            guard let altar else {
+                print("La imagen fue detectada; Esperando que cargue el Altar")
                 return
             }
             
-            let ancla = AnchorEntity(anchor: imagenAncla)
-            let copia = altar.clone(recursive: true)
+            guard !anclasColocadas.contains(imagenAncla.identifier) else { return }
             
             // El eje vertical de una imagen de referencia es su eje Z.
             // Esta rotación deja la mesa de pie sobre una imagen impresa
             // colocada horizontalmente.
-            copia.orientation = simd_quatf(
-                angle: .pi / 2,
-                axis: SIMD3<Float>(1, 0, 0)
-            )
-            copia.position.z = 0.01
             
-            ancla.addChild(copia)
-            vistaAR.scene.addAnchor(ancla)
-            anclasColocadas.insert(imagenAncla.identifier)
         }
         
         private var escalaSeleccionada: Float {
@@ -99,8 +95,6 @@ struct VistaARPorImagen: UIViewRepresentable {
         private var alturaSeleccionada: Float {
             Float(UserDefaults.standard.double(forKey: "altar.altura"))
         }
-        
-        
     }
 }
 #endif
