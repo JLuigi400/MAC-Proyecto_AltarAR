@@ -4,12 +4,11 @@ import SwiftUI
 import ARKit
 import RealityKit
 import UIKit
+import altar_animaciones
 
-// Requiere dos recursos dentro del target de la aplicación:
-// 1. Assets.xcassets > AR Resource Group llamado "ImagenesAltarAR".
-// 2. Mesa_Laboratorio.usdc.
-//
-// La imagen de referencia debe imprimirse y colocarse horizontalmente.
+// Aqui iniciaremos cargando la escena desde el paquete local 'altar_animaciones'
+// 'Scene' contiene el modelo del altar.
+
 struct VistaARPorImagen: UIViewRepresentable {
     func makeUIView(context: Context) -> ARView {
         let vistaAR = ARView(frame: .zero)
@@ -29,7 +28,6 @@ struct VistaARPorImagen: UIViewRepresentable {
         context.coordinator.vistaAR = vistaAR
         context.coordinator.cargarAltar()
         vistaAR.session.run(configuracion)
-
         return vistaAR
     }
 
@@ -47,53 +45,57 @@ struct VistaARPorImagen: UIViewRepresentable {
         func cargarAltar() {
             Task { @MainActor [weak self] in
                 do {
-                    let modelo = try await Entity(
-                        named: "Mesa_Laboratorio",
-                        in: .main
+                    // Aqui le solicitamos a la tarea que busque la escena compilada del Reality Composer Pro
+                    let escena = try await Entity (
+                        named: "Scene",
+                        in: altar_animacionesBundle
                     )
-                    modelo.scale = SIMD3<Float>(repeating: 0.7)
-                    self?.altar = modelo
-                    print("Altar cargado. Apunta la cámara a la imagen guía.")
+                    self?.altar = escena
+                    print("Escena del altar cargada desde altar_animaciones")
                 } catch {
-                    print("No se pudo cargar mesa_altar.usdc: \(error)")
+                    print("No se pudo cargar la escena, motivos - \(error)")
                 }
             }
         }
         
         func session(_ session: ARSession, didAdd anchors: [ARAnchor]) {
-            for case let imagenAncla as ARImageAnchor in anchors {
-                print("Imagen detectada: \(imagenAncla.referenceImage.name)")
+            procesarImagenes(anchors)
+        }
+        
+        /// Este apartado indica que si funciona a detectar la escena.
+        /// ARKit volvera a llamar aqui y entonces deberia mostrarse el modelo
+        
+        private func procesarImagenes(_ anchors: [ARAnchor]) {
+            for case let ImagenAncla as ARImageAnchor in anchors {
                 DispatchQueue.main.async { [weak self] in
-                    self?.colocarAltar(sobre: imagenAncla)
+                    self?.colocarAltar(sobre: ImagenAncla)
                 }
             }
         }
         
         private func colocarAltar(sobre imagenAncla: ARImageAnchor) {
-            guard let vistaAR else { return }
-            
-            let ancla = AnchorEntity(anchor: imagenAncla)
-            
-            guard let altar else {
-                print("La imagen fue detectada; Esperando que cargue el Altar")
+            guard let vistaAR, let altar,
+                  !anclasColocadas.contains(imagenAncla.identifier) else {
                 return
             }
             
-            guard !anclasColocadas.contains(imagenAncla.identifier) else { return }
+            let ancla = AnchorEntity(anchor: imagenAncla)
+            let copia = altar.clone(recursive: true)
             
-            // El eje vertical de una imagen de referencia es su eje Z.
-            // Esta rotación deja la mesa de pie sobre una imagen impresa
-            // colocada horizontalmente.
+            /// El marcador se coloca de forma 'horizontal'. Esta rotacion hace que la mesa quede de pie sobre la imagen.
+            /// Evitando que este 'Acostada'. Asi que la imagen debe estar posicionado en la mesa, en vez de la pared.
             
-        }
-        
-        private var escalaSeleccionada: Float {
-            let valor = UserDefaults.standard.double(forKey: "altar.escala")
-            return valor == 0 ? 0.70 : Float(valor)
-        }
-        
-        private var alturaSeleccionada: Float {
-            Float(UserDefaults.standard.double(forKey: "altar.altura"))
+            copia.orientation = simd_quatf(
+                angle: .pi / 2,
+                axis: SIMD3<Float>(0, 0, 0) // Cambiando la posicion en -1 o 0 en el primer digito, rota la posicion X del Modelo
+            )
+            copia.scale = SIMD3<Float>(repeating: 0.30)
+            copia.position.z = 0.01
+            
+            ancla.addChild(copia)
+            vistaAR.scene.addAnchor(ancla)
+            anclasColocadas.insert(imagenAncla.identifier)
+            print("Altar colocado sobre la imagen detectada.")
         }
     }
 }
