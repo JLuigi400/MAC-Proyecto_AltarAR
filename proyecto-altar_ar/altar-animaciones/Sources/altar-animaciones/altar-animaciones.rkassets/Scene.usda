@@ -10,68 +10,17 @@
 
 def Xform "Root"
 {
-    def "Mesa_Laboratorio" (
+    def "Mesa_Laboratorio_O" (
         active = true
         customData = {
             float3 rotationEulerHint = (-1.5707964, 0, 0)
         }
-        prepend references = @modelos/Mesa_Laboratorio.usdc@
+        prepend references = @modelos/Mesa_Laboratorio_O.usdc@
     )
     {
         quatf xformOp:orient = (0.70710677, -0.70710677, 0, 0)
         float3 xformOp:scale = (1, 1, 1)
-        float3 xformOp:translate = (0, 0, 0)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def RealityKitComponent "AnimationLibrary"
-        {
-            uniform token info:id = "RealityKit.AnimationLibrary"
-
-            def RealityKitAnimationFile "Mesa_Laboratorio_animacion_A_Open"
-            {
-                uniform asset file = @animaciones/Mesa_Laboratorio-animacion-A_Open.usdz@
-                uniform string name = "Mesa_Laboratorio-animacion-A_Open"
-            }
-
-            def RealityKitAnimationFile "Mesa_Laboratorio_animacion_G_Open"
-            {
-                uniform asset file = @animaciones/Mesa_Laboratorio-animacion-G_Open.usdz@
-                uniform string name = "Mesa_Laboratorio-animacion-G_Open"
-            }
-
-            def RealityKitAnimationFile "Mesa_Laboratorio_animacion_G_Close"
-            {
-                uniform asset file = @animaciones/Mesa_Laboratorio-animacion-G_Close.usdz@
-                uniform string name = "Mesa_Laboratorio-animacion-G_Close"
-            }
-
-            def RealityKitAnimationFile "Mesa_Laboratorio_animacion_A_Close"
-            {
-                uniform asset file = @animaciones/Mesa_Laboratorio-animacion-A_Close.usdz@
-                uniform string name = "Mesa_Laboratorio-animacion-A_Close"
-            }
-        }
-    }
-
-    def RealityKitTimeline "Timeline"
-    {
-        def RealityKitTrack "Track"
-        {
-            def RealityKitAction "Animation"
-            {
-                string actionKind = "animation"
-                int blendLayer = 500
-                double duration = 1
-                uniform token info:id = "972A7BFA-B822-4CF4-A4DE-E067157FA75C"
-                bool separateAnimatedValue = 1
-                double startTime = 0
-                rel target = </Root/Mesa_Laboratorio>
-
-                def RealityKitStruct "handoffType"
-                {
-                }
-            }
-        }
     }
 }
 
