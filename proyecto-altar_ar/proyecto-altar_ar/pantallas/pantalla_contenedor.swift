@@ -40,6 +40,10 @@ struct PantallaContenedor: View {
                 PantallaARBase {
                     pantallaActual = .menu
                 }
+            case .vistaPrevia :
+                PantallaVistaPrevia {
+                    pantallaActual = .menu
+                }
             }
         }
         .preferredColorScheme(.dark)

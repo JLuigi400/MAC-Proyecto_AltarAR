@@ -17,6 +17,7 @@ enum PantallaActual {
     case personajes
     case creditos
     case realidadAumentada
+    case vistaPrevia
 }
 
 struct PersonajeHomenaje: Identifiable {

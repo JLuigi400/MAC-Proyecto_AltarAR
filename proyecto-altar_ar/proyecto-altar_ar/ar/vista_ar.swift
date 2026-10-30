@@ -43,7 +43,7 @@ struct VistaARPorImagen: UIViewRepresentable {
         weak var vistaAR: ARView?
         private var altar: Entity?
         private var anclasColocadas = Set<UUID>()
-
+        
         func cargarAltar() {
             Task { @MainActor [weak self] in
                 do {
@@ -59,7 +59,7 @@ struct VistaARPorImagen: UIViewRepresentable {
                 }
             }
         }
-
+        
         func session(_ session: ARSession, didAdd anchors: [ARAnchor]) {
             for case let imagenAncla as ARImageAnchor in anchors {
                 DispatchQueue.main.async { [weak self] in
@@ -67,16 +67,16 @@ struct VistaARPorImagen: UIViewRepresentable {
                 }
             }
         }
-
+        
         private func colocarAltar(sobre imagenAncla: ARImageAnchor) {
             guard let vistaAR, let altar,
                   !anclasColocadas.contains(imagenAncla.identifier) else {
                 return
             }
-
+            
             let ancla = AnchorEntity(anchor: imagenAncla)
             let copia = altar.clone(recursive: true)
-
+            
             // El eje vertical de una imagen de referencia es su eje Z.
             // Esta rotación deja la mesa de pie sobre una imagen impresa
             // colocada horizontalmente.
@@ -85,11 +85,22 @@ struct VistaARPorImagen: UIViewRepresentable {
                 axis: SIMD3<Float>(1, 0, 0)
             )
             copia.position.z = 0.01
-
+            
             ancla.addChild(copia)
             vistaAR.scene.addAnchor(ancla)
             anclasColocadas.insert(imagenAncla.identifier)
         }
+        
+        private var escalaSeleccionada: Float {
+            let valor = UserDefaults.standard.double(forKey: "altar.escala")
+            return valor == 0 ? 0.70 : Float(valor)
+        }
+        
+        private var alturaSeleccionada: Float {
+            Float(UserDefaults.standard.double(forKey: "altar.altura"))
+        }
+        
+        
     }
 }
 #endif

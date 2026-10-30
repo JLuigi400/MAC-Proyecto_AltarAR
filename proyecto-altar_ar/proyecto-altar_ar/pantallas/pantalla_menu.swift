@@ -32,6 +32,10 @@ struct PantallaMenu: View {
                     abrirPantalla(.realidadAumentada)
                 }
                 
+                BotonMenu(titulo: "Vista Previa del Altar", icono: "cube.transparent") {
+                    abrirPantalla(.vistaPrevia)
+                }
+                
                 BotonMenu(titulo: "Equipo de Desarrollo", icono: "person.3.fill") {
                     abrirPantalla(.creditos)
                 }
