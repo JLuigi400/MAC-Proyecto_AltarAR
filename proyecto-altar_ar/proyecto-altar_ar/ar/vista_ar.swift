@@ -7,7 +7,7 @@ import UIKit
 
 // Requiere dos recursos dentro del target de la aplicación:
 // 1. Assets.xcassets > AR Resource Group llamado "ImagenesAltarAR".
-// 2. mesa_altar_base_estatica.usdz.
+// 2. Mesa_Laboratorio.usdc.
 //
 // La imagen de referencia debe imprimirse y colocarse horizontalmente.
 struct VistaARPorImagen: UIViewRepresentable {
@@ -55,7 +55,7 @@ struct VistaARPorImagen: UIViewRepresentable {
                     self?.altar = modelo
                     print("Altar cargado. Apunta la cámara a la imagen guía.")
                 } catch {
-                    print("No se pudo cargar mesa_altar_base_estatica.usdz: \(error)")
+                    print("No se pudo cargar mesa_altar.usdc: \(error)")
                 }
             }
         }

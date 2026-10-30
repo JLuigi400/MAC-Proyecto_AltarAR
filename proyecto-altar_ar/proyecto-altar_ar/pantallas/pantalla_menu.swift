@@ -24,16 +24,8 @@ struct PantallaMenu: View {
                     abrirPantalla(.informacion)
                 }
                 
-                BotonMenu(titulo: "Explorar sus Personajes", icono: "person.3") {
-                    abrirPantalla(.personajes)
-                }
-                
                 BotonMenu(titulo: "Ver el altar con la cámara", icono: "camera") {
                     abrirPantalla(.realidadAumentada)
-                }
-                
-                BotonMenu(titulo: "Vista Previa del Altar", icono: "cube.transparent") {
-                    abrirPantalla(.vistaPrevia)
                 }
                 
                 BotonMenu(titulo: "Equipo de Desarrollo", icono: "person.3.fill") {

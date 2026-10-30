@@ -19,7 +19,7 @@ struct PantallaARBase: View {
             VistaARPorImagen()
                 .clipShape(RoundedRectangle(cornerRadius: 18))
             
-            Text("Busca una superficie horizontal. Por ahora aparecerá un cubo naranja; después")
+            Text("Apunta la cámara a la imagen conmemorativa para colocar la mesa del altar")
                 .multilineTextAlignment(.center)
             #else
             Image(systemName: "iphone")

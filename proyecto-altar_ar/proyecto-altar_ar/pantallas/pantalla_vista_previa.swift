@@ -28,7 +28,7 @@ struct PantallaVistaPrevia: View {
                     .frame(height: 250)
                     .clipShape(RoundedRectangle(cornerRadius: 20))
 
-                Text("Homenaje a Ángel Reyes")
+                Text("Homenaje a Alexis Ortega")
                     .font(.title2.bold())
 
                 Text("Esta ficha es una base visual. Agreguen solamente datos, imágenes y créditos que el equipo haya verificado antes de la entrega final.")

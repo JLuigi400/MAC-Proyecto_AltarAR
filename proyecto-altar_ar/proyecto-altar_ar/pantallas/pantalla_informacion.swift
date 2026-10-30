@@ -13,20 +13,52 @@ struct PantallaInformacion: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 20) {
-                Text("Información")
+                Text("Alexis Ortega")
                     .font(.custom("Bangers", size: 32, relativeTo: .title))
                 
-                Text("Este proyecto propone un altar digital como homenaje a Alexis Ortega y a las voces que acompañaron al público en distintas historias.")
+                
                 
                 Text("Que encontrarás?")
                     .font(.title2.bold())
                 
-                TextoConIcono(icono: "person.3", texto: "Tres espacios para explorar personajes y recuerdos")
-                TextoConIcono(icono: "cube.transparent", texto: "Una base de altar que más adelante aparecerá sobre una imagen con la cámara")
-                TextoConIcono(icono: "speaker.wave.2", texto: "Un espacio futuro para audios que el equipo tenga permiso de utilizar")
+                Text("Alexis Ortega fue la voz de Spider-Man, interpretado por Tom Holland, en el doblaje al español latino entre 2016 y 2018. También interpretó al personaje en producciones animadas de Marvel.")
+                
+                Text("Participaciones destacadas")
+                    .font(.title2.bold())
+                
+                FilaParticipacion(
+                    anio: "2014",
+                    titulo: "Big Hero 6",
+                    detalle: "Prestación a la voz en México de Tadashi Hamada en la película de Pixar. Igualmente en Disney Infinity 2.0 en Videojuegos"
+                )
+                
+                FilaParticipacion(
+                    anio: "2016",
+                    titulo: "Capitán América: Civil War",
+                    detalle: "Primera aparición de Tom Holland como Spider-Man en el UCM y debut de Alexis Ortega como su voz latina."
+                )
+                
+                FilaParticipacion(
+                    anio: "2017",
+                    titulo: "Cars 3",
+                    detalle: "Prestación de voz para el personaje en latino de Ryan 'Inside' Laney."
+                )
+                
+                FilaParticipacion(
+                    anio: "2017",
+                    titulo: "Spider-Man: De regreso a casa",
+                    detalle: "Primera película individual de Tom Holland como Spider-Man."
+                )
+                
+                FilaParticipacion(
+                    anio: "2018",
+                    titulo: "Avengers: Infinity War",
+                    detalle: "Interpretó a Peter Parker, incluida la escena: «No me quiero ir, señor Stark»."
+                )
+                
                 
                 // Notas a tomar en cuenta
-                Text("El contenido biográfico, las imágenes y los audios deben revisarse con el equipo antes de publicar la aplicación")
+                Text("Este altar reúne recuerdos de su trabajo.")
                     .font(.footnote)
                     .foregroundStyle(Color("texto_secundario"))
                 
@@ -44,11 +76,37 @@ struct PantallaInformacion: View {
     }
 }
 
-private struct TextoConIcono: View {
-    let icono: String
-    let texto: String
+private struct ImagenAlexisOrtega: View {
+    var body: some View {
+        ZStack {
+            Color("superficie")
+            Image("foto-altar")
+                .resizable()
+                .scaledToFill()
+        }
+        .clipped()
+    }
+}
+
+private struct FilaParticipacion: View {
+    let anio: String
+    let titulo: String
+    let detalle: String
     
     var body: some View {
-        Label(texto, systemImage: icono)
+        HStack (alignment: .top, spacing: 12) {
+            Text(anio)
+                .font(.headline)
+                .foregroundStyle(Color("acento_cempasuchil"))
+                .frame(width: 44, alignment: .leading)
+            
+            VStack(alignment: .leading, spacing: 4) {
+                Text(titulo)
+                    .font(.headline)
+                Text(detalle)
+                    .font(.subheadline)
+                    .foregroundStyle(Color("texto_secundario"))
+            }
+        }
     }
 }
