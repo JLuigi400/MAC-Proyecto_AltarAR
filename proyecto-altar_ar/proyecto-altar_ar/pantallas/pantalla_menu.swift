@@ -1,65 +1,33 @@
-//
-//  pantalla_navegacion.swift
-//  proyecto-altar_ar
-//
-//  Created by alumno on 21/10/26.
-//
-
 import SwiftUI
 
 struct PantallaMenu: View {
     let abrirPantalla: (PantallaActual) -> Void
 
     var body: some View {
-        ScrollView {
+        ZStack {
+            FondoAltar()
             VStack(spacing: 18) {
-                Text("¿Qué quieres explorar?")
-                    .font(.custom("Bangers", size: 32, relativeTo: .largeTitle))
+                InsigniaAltar()
+                    .scaleEffect(0.7)
+                    .frame(height: 72)
+                Text("¿QUÉ QUIERES EXPLORAR?")
+                    .font(.custom("Bangers-Regular", size: 32, relativeTo: .largeTitle))
+                Text("Un recorrido por el trabajo y el recuerdo de Alexis Ortega.")
                     .multilineTextAlignment(.center)
+                    .foregroundStyle(Color("texto_secundario"))
 
-                Text("Selecciona una opción para continuar.")
-                    .multilineTextAlignment(.center)
-                
-                BotonMenu(titulo: "Información", icono: "book") {
+                BotonAltar(titulo: "Conoce sus voces", icono: "waveform") {
                     abrirPantalla(.informacion)
                 }
-                
-                BotonMenu(titulo: "Ver el altar con la cámara", icono: "camera") {
+                BotonAltar(titulo: "Ver el altar con la cámara", icono: "camera.viewfinder") {
                     abrirPantalla(.realidadAumentada)
                 }
-                
-                BotonMenu(titulo: "Equipo de Desarrollo", icono: "person.3.fill") {
+                BotonAltar(titulo: "Equipo de desarrollo", icono: "person.3.fill") {
                     abrirPantalla(.creditos)
                 }
             }
             .padding(24)
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color("fondo").ignoresSafeArea())
         .foregroundStyle(Color("texto_principal"))
-    }
-}
-
-private struct BotonMenu: View {
-    
-    let titulo: String
-    let icono: String
-    let accion: () -> Void
-        
-    var body: some View {
-        Button(action: accion) {
-            Label(titulo, systemImage: icono)
-                .frame(maxWidth: .infinity)
-                .padding()
-        }
-        .buttonStyle(.bordered)
-        .tint(Color("acento_rojo"))
-    }
-}
-
-#Preview {
-    NavigationStack {
-        PantallaMenu { _ in }
-            .preferredColorScheme(.dark)
     }
 }
