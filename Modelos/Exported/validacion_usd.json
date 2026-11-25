@@ -1,0 +1,438 @@
+{
+  "static_scene": {
+    "path": "C:\\Users\\Peque\\Documents\\Universidad\\Semestre_12\\MAC-IOS\\MAC-Proyecto_AltarAR\\Modelos\\Exported\\RCP_Separado_20261124_v1\\Escena_Estatica\\Altar_Estatico_Sin_Interactivos.usdc",
+    "bytes": 38561796,
+    "default_prim": "/AltarAlexis",
+    "start_time": 0.0,
+    "end_time": 0.0,
+    "time_codes_per_second": 24.0,
+    "prim_count": 1018,
+    "mesh_count": 445,
+    "material_count": 26,
+    "total_time_samples": 0,
+    "sampled_attributes": [],
+    "archive_files": []
+  },
+  "animations": [
+    {
+      "path": "C:\\Users\\Peque\\Documents\\Universidad\\Semestre_12\\MAC-IOS\\MAC-Proyecto_AltarAR\\Modelos\\Exported\\RCP_Separado_20261124_v1\\Animaciones_Individuales\\Baymax_Saludo.usdz",
+      "bytes": 1300793,
+      "default_prim": "/AltarAlexis",
+      "start_time": 1.0,
+      "end_time": 120.0,
+      "time_codes_per_second": 24.0,
+      "prim_count": 22,
+      "mesh_count": 3,
+      "material_count": 2,
+      "total_time_samples": 185,
+      "sampled_attributes": [
+        {
+          "prim": "/AltarAlexis/root/scene/Meshes/Sketchfab_model/ROBOT_FBX/RootNode/BAYMAX/ANIM_Baymax_Saludo",
+          "attribute": "xformOp:rotateXYZ",
+          "samples": 92
+        },
+        {
+          "prim": "/AltarAlexis/root/scene/Meshes/Sketchfab_model/ROBOT_FBX/RootNode/BAYMAX/ANIM_Baymax_Saludo",
+          "attribute": "xformOp:scale",
+          "samples": 92
+        },
+        {
+          "prim": "/AltarAlexis/root/scene/Meshes/Sketchfab_model/ROBOT_FBX/RootNode/BAYMAX/ANIM_Baymax_Saludo",
+          "attribute": "xformOp:translate",
+          "samples": 1
+        }
+      ],
+      "archive_files": [
+        "Baymax_Saludo.usdc",
+        "textures/Material_30_baseColor.jpg"
+      ]
+    },
+    {
+      "path": "C:\\Users\\Peque\\Documents\\Universidad\\Semestre_12\\MAC-IOS\\MAC-Proyecto_AltarAR\\Modelos\\Exported\\RCP_Separado_20261124_v1\\Animaciones_Individuales\\Vehiculo_Arranque_Carrera.usdz",
+      "bytes": 20327559,
+      "default_prim": "/AltarAlexis",
+      "start_time": 1.0,
+      "end_time": 120.0,
+      "time_codes_per_second": 24.0,
+      "prim_count": 48,
+      "mesh_count": 1,
+      "material_count": 12,
+      "total_time_samples": 201,
+      "sampled_attributes": [
+        {
+          "prim": "/AltarAlexis/root/ANIM_Vehiculo_Arranque_Optimizado",
+          "attribute": "xformOp:rotateXYZ",
+          "samples": 80
+        },
+        {
+          "prim": "/AltarAlexis/root/ANIM_Vehiculo_Arranque_Optimizado",
+          "attribute": "xformOp:scale",
+          "samples": 1
+        },
+        {
+          "prim": "/AltarAlexis/root/ANIM_Vehiculo_Arranque_Optimizado",
+          "attribute": "xformOp:translate",
+          "samples": 120
+        }
+      ],
+      "archive_files": [
+        "Vehiculo_Arranque_Carrera.usdc",
+        "textures/lineasAzules.png",
+        "textures/cuepro Base Color.png"
+      ]
+    },
+    {
+      "path": "C:\\Users\\Peque\\Documents\\Universidad\\Semestre_12\\MAC-IOS\\MAC-Proyecto_AltarAR\\Modelos\\Exported\\RCP_Separado_20261124_v1\\Animaciones_Individuales\\Arana_Movimiento_Sutil.usdz",
+      "bytes": 7441186,
+      "default_prim": "/AltarAlexis",
+      "start_time": 1.0,
+      "end_time": 120.0,
+      "time_codes_per_second": 24.0,
+      "prim_count": 11,
+      "mesh_count": 1,
+      "material_count": 1,
+      "total_time_samples": 241,
+      "sampled_attributes": [
+        {
+          "prim": "/AltarAlexis/root/ANIM_Arana_Sutil",
+          "attribute": "xformOp:rotateXYZ",
+          "samples": 120
+        },
+        {
+          "prim": "/AltarAlexis/root/ANIM_Arana_Sutil",
+          "attribute": "xformOp:scale",
+          "samples": 1
+        },
+        {
+          "prim": "/AltarAlexis/root/ANIM_Arana_Sutil",
+          "attribute": "xformOp:translate",
+          "samples": 120
+        }
+      ],
+      "archive_files": [
+        "Arana_Movimiento_Sutil.usdc",
+        "textures/LP_Material_BaseColor.png"
+      ]
+    },
+    {
+      "path": "C:\\Users\\Peque\\Documents\\Universidad\\Semestre_12\\MAC-IOS\\MAC-Proyecto_AltarAR\\Modelos\\Exported\\RCP_Separado_20261124_v1\\Animaciones_Individuales\\PapelPicado_01_Brisa.usdz",
+      "bytes": 3113839,
+      "default_prim": "/AltarAlexis",
+      "start_time": 1.0,
+      "end_time": 120.0,
+      "time_codes_per_second": 24.0,
+      "prim_count": 8,
+      "mesh_count": 1,
+      "material_count": 1,
+      "total_time_samples": 122,
+      "sampled_attributes": [
+        {
+          "prim": "/AltarAlexis/root/ANIM_PapelPicado_01",
+          "attribute": "xformOp:rotateXYZ",
+          "samples": 120
+        },
+        {
+          "prim": "/AltarAlexis/root/ANIM_PapelPicado_01",
+          "attribute": "xformOp:scale",
+          "samples": 1
+        },
+        {
+          "prim": "/AltarAlexis/root/ANIM_PapelPicado_01",
+          "attribute": "xformOp:translate",
+          "samples": 1
+        }
+      ],
+      "archive_files": [
+        "PapelPicado_01_Brisa.usdc"
+      ]
+    },
+    {
+      "path": "C:\\Users\\Peque\\Documents\\Universidad\\Semestre_12\\MAC-IOS\\MAC-Proyecto_AltarAR\\Modelos\\Exported\\RCP_Separado_20261124_v1\\Animaciones_Individuales\\PapelPicado_02_Brisa.usdz",
+      "bytes": 3113853,
+      "default_prim": "/AltarAlexis",
+      "start_time": 1.0,
+      "end_time": 120.0,
+      "time_codes_per_second": 24.0,
+      "prim_count": 8,
+      "mesh_count": 1,
+      "material_count": 1,
+      "total_time_samples": 122,
+      "sampled_attributes": [
+        {
+          "prim": "/AltarAlexis/root/ANIM_PapelPicado_02",
+          "attribute": "xformOp:rotateXYZ",
+          "samples": 120
+        },
+        {
+          "prim": "/AltarAlexis/root/ANIM_PapelPicado_02",
+          "attribute": "xformOp:scale",
+          "samples": 1
+        },
+        {
+          "prim": "/AltarAlexis/root/ANIM_PapelPicado_02",
+          "attribute": "xformOp:translate",
+          "samples": 1
+        }
+      ],
+      "archive_files": [
+        "PapelPicado_02_Brisa.usdc"
+      ]
+    },
+    {
+      "path": "C:\\Users\\Peque\\Documents\\Universidad\\Semestre_12\\MAC-IOS\\MAC-Proyecto_AltarAR\\Modelos\\Exported\\RCP_Separado_20261124_v1\\Animaciones_Individuales\\PapelPicado_03_Brisa.usdz",
+      "bytes": 3113855,
+      "default_prim": "/AltarAlexis",
+      "start_time": 1.0,
+      "end_time": 120.0,
+      "time_codes_per_second": 24.0,
+      "prim_count": 8,
+      "mesh_count": 1,
+      "material_count": 1,
+      "total_time_samples": 122,
+      "sampled_attributes": [
+        {
+          "prim": "/AltarAlexis/root/ANIM_PapelPicado_03",
+          "attribute": "xformOp:rotateXYZ",
+          "samples": 120
+        },
+        {
+          "prim": "/AltarAlexis/root/ANIM_PapelPicado_03",
+          "attribute": "xformOp:scale",
+          "samples": 1
+        },
+        {
+          "prim": "/AltarAlexis/root/ANIM_PapelPicado_03",
+          "attribute": "xformOp:translate",
+          "samples": 1
+        }
+      ],
+      "archive_files": [
+        "PapelPicado_03_Brisa.usdc"
+      ]
+    },
+    {
+      "path": "C:\\Users\\Peque\\Documents\\Universidad\\Semestre_12\\MAC-IOS\\MAC-Proyecto_AltarAR\\Modelos\\Exported\\RCP_Separado_20261124_v1\\Animaciones_Individuales\\PapelPicado_04_Brisa.usdz",
+      "bytes": 3113856,
+      "default_prim": "/AltarAlexis",
+      "start_time": 1.0,
+      "end_time": 120.0,
+      "time_codes_per_second": 24.0,
+      "prim_count": 8,
+      "mesh_count": 1,
+      "material_count": 1,
+      "total_time_samples": 122,
+      "sampled_attributes": [
+        {
+          "prim": "/AltarAlexis/root/ANIM_PapelPicado_04",
+          "attribute": "xformOp:rotateXYZ",
+          "samples": 120
+        },
+        {
+          "prim": "/AltarAlexis/root/ANIM_PapelPicado_04",
+          "attribute": "xformOp:scale",
+          "samples": 1
+        },
+        {
+          "prim": "/AltarAlexis/root/ANIM_PapelPicado_04",
+          "attribute": "xformOp:translate",
+          "samples": 1
+        }
+      ],
+      "archive_files": [
+        "PapelPicado_04_Brisa.usdc"
+      ]
+    },
+    {
+      "path": "C:\\Users\\Peque\\Documents\\Universidad\\Semestre_12\\MAC-IOS\\MAC-Proyecto_AltarAR\\Modelos\\Exported\\RCP_Separado_20261124_v1\\Animaciones_Individuales\\PapelPicado_05_Brisa.usdz",
+      "bytes": 3113850,
+      "default_prim": "/AltarAlexis",
+      "start_time": 1.0,
+      "end_time": 120.0,
+      "time_codes_per_second": 24.0,
+      "prim_count": 8,
+      "mesh_count": 1,
+      "material_count": 1,
+      "total_time_samples": 122,
+      "sampled_attributes": [
+        {
+          "prim": "/AltarAlexis/root/ANIM_PapelPicado_05",
+          "attribute": "xformOp:rotateXYZ",
+          "samples": 120
+        },
+        {
+          "prim": "/AltarAlexis/root/ANIM_PapelPicado_05",
+          "attribute": "xformOp:scale",
+          "samples": 1
+        },
+        {
+          "prim": "/AltarAlexis/root/ANIM_PapelPicado_05",
+          "attribute": "xformOp:translate",
+          "samples": 1
+        }
+      ],
+      "archive_files": [
+        "PapelPicado_05_Brisa.usdc"
+      ]
+    },
+    {
+      "path": "C:\\Users\\Peque\\Documents\\Universidad\\Semestre_12\\MAC-IOS\\MAC-Proyecto_AltarAR\\Modelos\\Exported\\RCP_Separado_20261124_v1\\Animaciones_Individuales\\PapelPicado_06_Brisa.usdz",
+      "bytes": 3113850,
+      "default_prim": "/AltarAlexis",
+      "start_time": 1.0,
+      "end_time": 120.0,
+      "time_codes_per_second": 24.0,
+      "prim_count": 8,
+      "mesh_count": 1,
+      "material_count": 1,
+      "total_time_samples": 122,
+      "sampled_attributes": [
+        {
+          "prim": "/AltarAlexis/root/ANIM_PapelPicado_06",
+          "attribute": "xformOp:rotateXYZ",
+          "samples": 120
+        },
+        {
+          "prim": "/AltarAlexis/root/ANIM_PapelPicado_06",
+          "attribute": "xformOp:scale",
+          "samples": 1
+        },
+        {
+          "prim": "/AltarAlexis/root/ANIM_PapelPicado_06",
+          "attribute": "xformOp:translate",
+          "samples": 1
+        }
+      ],
+      "archive_files": [
+        "PapelPicado_06_Brisa.usdc"
+      ]
+    },
+    {
+      "path": "C:\\Users\\Peque\\Documents\\Universidad\\Semestre_12\\MAC-IOS\\MAC-Proyecto_AltarAR\\Modelos\\Exported\\RCP_Separado_20261124_v1\\Animaciones_Individuales\\PapelPicado_07_Brisa.usdz",
+      "bytes": 3113854,
+      "default_prim": "/AltarAlexis",
+      "start_time": 1.0,
+      "end_time": 120.0,
+      "time_codes_per_second": 24.0,
+      "prim_count": 8,
+      "mesh_count": 1,
+      "material_count": 1,
+      "total_time_samples": 122,
+      "sampled_attributes": [
+        {
+          "prim": "/AltarAlexis/root/ANIM_PapelPicado_07",
+          "attribute": "xformOp:rotateXYZ",
+          "samples": 120
+        },
+        {
+          "prim": "/AltarAlexis/root/ANIM_PapelPicado_07",
+          "attribute": "xformOp:scale",
+          "samples": 1
+        },
+        {
+          "prim": "/AltarAlexis/root/ANIM_PapelPicado_07",
+          "attribute": "xformOp:translate",
+          "samples": 1
+        }
+      ],
+      "archive_files": [
+        "PapelPicado_07_Brisa.usdc"
+      ]
+    },
+    {
+      "path": "C:\\Users\\Peque\\Documents\\Universidad\\Semestre_12\\MAC-IOS\\MAC-Proyecto_AltarAR\\Modelos\\Exported\\RCP_Separado_20261124_v1\\Animaciones_Individuales\\PapelPicado_08_Brisa.usdz",
+      "bytes": 3113854,
+      "default_prim": "/AltarAlexis",
+      "start_time": 1.0,
+      "end_time": 120.0,
+      "time_codes_per_second": 24.0,
+      "prim_count": 8,
+      "mesh_count": 1,
+      "material_count": 1,
+      "total_time_samples": 122,
+      "sampled_attributes": [
+        {
+          "prim": "/AltarAlexis/root/ANIM_PapelPicado_08",
+          "attribute": "xformOp:rotateXYZ",
+          "samples": 120
+        },
+        {
+          "prim": "/AltarAlexis/root/ANIM_PapelPicado_08",
+          "attribute": "xformOp:scale",
+          "samples": 1
+        },
+        {
+          "prim": "/AltarAlexis/root/ANIM_PapelPicado_08",
+          "attribute": "xformOp:translate",
+          "samples": 1
+        }
+      ],
+      "archive_files": [
+        "PapelPicado_08_Brisa.usdc"
+      ]
+    },
+    {
+      "path": "C:\\Users\\Peque\\Documents\\Universidad\\Semestre_12\\MAC-IOS\\MAC-Proyecto_AltarAR\\Modelos\\Exported\\RCP_Separado_20261124_v1\\Animaciones_Individuales\\PapelPicado_09_Brisa.usdz",
+      "bytes": 3113860,
+      "default_prim": "/AltarAlexis",
+      "start_time": 1.0,
+      "end_time": 120.0,
+      "time_codes_per_second": 24.0,
+      "prim_count": 8,
+      "mesh_count": 1,
+      "material_count": 1,
+      "total_time_samples": 122,
+      "sampled_attributes": [
+        {
+          "prim": "/AltarAlexis/root/ANIM_PapelPicado_09",
+          "attribute": "xformOp:rotateXYZ",
+          "samples": 120
+        },
+        {
+          "prim": "/AltarAlexis/root/ANIM_PapelPicado_09",
+          "attribute": "xformOp:scale",
+          "samples": 1
+        },
+        {
+          "prim": "/AltarAlexis/root/ANIM_PapelPicado_09",
+          "attribute": "xformOp:translate",
+          "samples": 1
+        }
+      ],
+      "archive_files": [
+        "PapelPicado_09_Brisa.usdc"
+      ]
+    },
+    {
+      "path": "C:\\Users\\Peque\\Documents\\Universidad\\Semestre_12\\MAC-IOS\\MAC-Proyecto_AltarAR\\Modelos\\Exported\\RCP_Separado_20261124_v1\\Animaciones_Individuales\\PapelPicado_10_Brisa.usdz",
+      "bytes": 3113856,
+      "default_prim": "/AltarAlexis",
+      "start_time": 1.0,
+      "end_time": 120.0,
+      "time_codes_per_second": 24.0,
+      "prim_count": 8,
+      "mesh_count": 1,
+      "material_count": 1,
+      "total_time_samples": 122,
+      "sampled_attributes": [
+        {
+          "prim": "/AltarAlexis/root/ANIM_PapelPicado_10",
+          "attribute": "xformOp:rotateXYZ",
+          "samples": 120
+        },
+        {
+          "prim": "/AltarAlexis/root/ANIM_PapelPicado_10",
+          "attribute": "xformOp:scale",
+          "samples": 1
+        },
+        {
+          "prim": "/AltarAlexis/root/ANIM_PapelPicado_10",
+          "attribute": "xformOp:translate",
+          "samples": 1
+        }
+      ],
+      "archive_files": [
+        "PapelPicado_10_Brisa.usdc"
+      ]
+    }
+  ]
+}

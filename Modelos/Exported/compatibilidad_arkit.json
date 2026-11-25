@@ -1,0 +1,157 @@
+{
+  "static": {
+    "file": "C:\\Users\\Peque\\Documents\\Universidad\\Semestre_12\\MAC-IOS\\MAC-Proyecto_AltarAR\\Modelos\\Exported\\RCP_Separado_20261124_v1\\Escena_Estatica\\Altar_Estatico_Sin_Interactivos.usdc",
+    "time_samples": 0,
+    "forbidden_interactive_prims": [],
+    "compatibility": {
+      "errors": [],
+      "warnings": [],
+      "failed_checks": []
+    }
+  },
+  "animations": [
+    {
+      "file": "Arana_Movimiento_Sutil.usdz",
+      "bytes": 7441186,
+      "prim_count": 11,
+      "time_samples": 241,
+      "compatibility": {
+        "errors": [],
+        "warnings": [],
+        "failed_checks": []
+      }
+    },
+    {
+      "file": "Baymax_Saludo.usdz",
+      "bytes": 1300793,
+      "prim_count": 22,
+      "time_samples": 185,
+      "compatibility": {
+        "errors": [],
+        "warnings": [],
+        "failed_checks": []
+      }
+    },
+    {
+      "file": "PapelPicado_01_Brisa.usdz",
+      "bytes": 3113839,
+      "prim_count": 8,
+      "time_samples": 122,
+      "compatibility": {
+        "errors": [],
+        "warnings": [],
+        "failed_checks": []
+      }
+    },
+    {
+      "file": "PapelPicado_02_Brisa.usdz",
+      "bytes": 3113853,
+      "prim_count": 8,
+      "time_samples": 122,
+      "compatibility": {
+        "errors": [],
+        "warnings": [],
+        "failed_checks": []
+      }
+    },
+    {
+      "file": "PapelPicado_03_Brisa.usdz",
+      "bytes": 3113855,
+      "prim_count": 8,
+      "time_samples": 122,
+      "compatibility": {
+        "errors": [],
+        "warnings": [],
+        "failed_checks": []
+      }
+    },
+    {
+      "file": "PapelPicado_04_Brisa.usdz",
+      "bytes": 3113856,
+      "prim_count": 8,
+      "time_samples": 122,
+      "compatibility": {
+        "errors": [],
+        "warnings": [],
+        "failed_checks": []
+      }
+    },
+    {
+      "file": "PapelPicado_05_Brisa.usdz",
+      "bytes": 3113850,
+      "prim_count": 8,
+      "time_samples": 122,
+      "compatibility": {
+        "errors": [],
+        "warnings": [],
+        "failed_checks": []
+      }
+    },
+    {
+      "file": "PapelPicado_06_Brisa.usdz",
+      "bytes": 3113850,
+      "prim_count": 8,
+      "time_samples": 122,
+      "compatibility": {
+        "errors": [],
+        "warnings": [],
+        "failed_checks": []
+      }
+    },
+    {
+      "file": "PapelPicado_07_Brisa.usdz",
+      "bytes": 3113854,
+      "prim_count": 8,
+      "time_samples": 122,
+      "compatibility": {
+        "errors": [],
+        "warnings": [],
+        "failed_checks": []
+      }
+    },
+    {
+      "file": "PapelPicado_08_Brisa.usdz",
+      "bytes": 3113854,
+      "prim_count": 8,
+      "time_samples": 122,
+      "compatibility": {
+        "errors": [],
+        "warnings": [],
+        "failed_checks": []
+      }
+    },
+    {
+      "file": "PapelPicado_09_Brisa.usdz",
+      "bytes": 3113860,
+      "prim_count": 8,
+      "time_samples": 122,
+      "compatibility": {
+        "errors": [],
+        "warnings": [],
+        "failed_checks": []
+      }
+    },
+    {
+      "file": "PapelPicado_10_Brisa.usdz",
+      "bytes": 3113856,
+      "prim_count": 8,
+      "time_samples": 122,
+      "compatibility": {
+        "errors": [],
+        "warnings": [],
+        "failed_checks": []
+      }
+    },
+    {
+      "file": "Vehiculo_Arranque_Carrera.usdz",
+      "bytes": 20327559,
+      "prim_count": 48,
+      "time_samples": 201,
+      "compatibility": {
+        "errors": [],
+        "warnings": [],
+        "failed_checks": []
+      }
+    }
+  ]
+}

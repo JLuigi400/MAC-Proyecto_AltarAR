@@ -1,0 +1,166 @@
+{
+  "generated_at": "2026-11-24T11:51:54.500442-07:00",
+  "source_blend": "C:\\Users\\Peque\\Documents\\Universidad\\Semestre_12\\MAC-IOS\\MAC-Proyecto_AltarAR\\Modelos\\Altar-Base\\Mesa_Laboratorio-Ver4_2-Animado-Optimizado.blend",
+  "frames": [
+    1,
+    120
+  ],
+  "fps": 24,
+  "orientation": {
+    "up": "Y",
+    "forward": "-Z"
+  },
+  "static_scene": {
+    "path": "C:\\Users\\Peque\\Documents\\Universidad\\Semestre_12\\MAC-IOS\\MAC-Proyecto_AltarAR\\Modelos\\Exported\\RCP_Separado_20261124_v1\\Escena_Estatica\\Altar_Estatico_Sin_Interactivos.usdc",
+    "object_count": 526,
+    "excluded_interactive_object_count": 29
+  },
+  "animations": [
+    {
+      "id": "baymax_saludo",
+      "path": "C:\\Users\\Peque\\Documents\\Universidad\\Semestre_12\\MAC-IOS\\MAC-Proyecto_AltarAR\\Modelos\\Exported\\RCP_Separado_20261124_v1\\Animaciones_Individuales\\Baymax_Saludo.usdz",
+      "action": "Baymax_Saludo",
+      "loop": false,
+      "trigger": "interaccion",
+      "selected_objects": [
+        "ANIM_Baymax_Saludo",
+        "BAYMAX",
+        "BAYMAX_Material__30_0",
+        "BAYMAX_WHITE_0",
+        "Baymax_Brazo_Derecho"
+      ]
+    },
+    {
+      "id": "vehiculo_arranque",
+      "path": "C:\\Users\\Peque\\Documents\\Universidad\\Semestre_12\\MAC-IOS\\MAC-Proyecto_AltarAR\\Modelos\\Exported\\RCP_Separado_20261124_v1\\Animaciones_Individuales\\Vehiculo_Arranque_Carrera.usdz",
+      "action": "Vehiculo_Arranque_Carrera_Optimizado",
+      "loop": false,
+      "trigger": "interaccion",
+      "selected_objects": [
+        "ANIM_Vehiculo_Arranque_Optimizado",
+        "Vehiculo_Carcasa_Exterior_Optimizada"
+      ]
+    },
+    {
+      "id": "arana_sutil",
+      "path": "C:\\Users\\Peque\\Documents\\Universidad\\Semestre_12\\MAC-IOS\\MAC-Proyecto_AltarAR\\Modelos\\Exported\\RCP_Separado_20261124_v1\\Animaciones_Individuales\\Arana_Movimiento_Sutil.usdz",
+      "action": "Arana_Movimiento_Sutil",
+      "loop": true,
+      "trigger": "automatico",
+      "selected_objects": [
+        "ANIM_Arana_Sutil",
+        "Circle_084"
+      ]
+    },
+    {
+      "id": "papel_picado_01",
+      "path": "C:\\Users\\Peque\\Documents\\Universidad\\Semestre_12\\MAC-IOS\\MAC-Proyecto_AltarAR\\Modelos\\Exported\\RCP_Separado_20261124_v1\\Animaciones_Individuales\\PapelPicado_01_Brisa.usdz",
+      "action": "PapelPicado_Brisa_01",
+      "loop": true,
+      "trigger": "automatico",
+      "selected_objects": [
+        "ANIM_PapelPicado_01",
+        "Calavera_de_papel_picado_01_Malla_calada"
+      ]
+    },
+    {
+      "id": "papel_picado_02",
+      "path": "C:\\Users\\Peque\\Documents\\Universidad\\Semestre_12\\MAC-IOS\\MAC-Proyecto_AltarAR\\Modelos\\Exported\\RCP_Separado_20261124_v1\\Animaciones_Individuales\\PapelPicado_02_Brisa.usdz",
+      "action": "PapelPicado_Brisa_02",
+      "loop": true,
+      "trigger": "automatico",
+      "selected_objects": [
+        "ANIM_PapelPicado_02",
+        "Calavera_de_papel_picado_02_Malla_calada"
+      ]
+    },
+    {
+      "id": "papel_picado_03",
+      "path": "C:\\Users\\Peque\\Documents\\Universidad\\Semestre_12\\MAC-IOS\\MAC-Proyecto_AltarAR\\Modelos\\Exported\\RCP_Separado_20261124_v1\\Animaciones_Individuales\\PapelPicado_03_Brisa.usdz",
+      "action": "PapelPicado_Brisa_03",
+      "loop": true,
+      "trigger": "automatico",
+      "selected_objects": [
+        "ANIM_PapelPicado_03",
+        "Calavera_de_papel_picado_03_Malla_calada"
+      ]
+    },
+    {
+      "id": "papel_picado_04",
+      "path": "C:\\Users\\Peque\\Documents\\Universidad\\Semestre_12\\MAC-IOS\\MAC-Proyecto_AltarAR\\Modelos\\Exported\\RCP_Separado_20261124_v1\\Animaciones_Individuales\\PapelPicado_04_Brisa.usdz",
+      "action": "PapelPicado_Brisa_04",
+      "loop": true,
+      "trigger": "automatico",
+      "selected_objects": [
+        "ANIM_PapelPicado_04",
+        "Calavera_de_papel_picado_04_Malla_calada"
+      ]
+    },
+    {
+      "id": "papel_picado_05",
+      "path": "C:\\Users\\Peque\\Documents\\Universidad\\Semestre_12\\MAC-IOS\\MAC-Proyecto_AltarAR\\Modelos\\Exported\\RCP_Separado_20261124_v1\\Animaciones_Individuales\\PapelPicado_05_Brisa.usdz",
+      "action": "PapelPicado_Brisa_05",
+      "loop": true,
+      "trigger": "automatico",
+      "selected_objects": [
+        "ANIM_PapelPicado_05",
+        "Calavera_de_papel_picado_05_Malla_calada"
+      ]
+    },
+    {
+      "id": "papel_picado_06",
+      "path": "C:\\Users\\Peque\\Documents\\Universidad\\Semestre_12\\MAC-IOS\\MAC-Proyecto_AltarAR\\Modelos\\Exported\\RCP_Separado_20261124_v1\\Animaciones_Individuales\\PapelPicado_06_Brisa.usdz",
+      "action": "PapelPicado_Brisa_06",
+      "loop": true,
+      "trigger": "automatico",
+      "selected_objects": [
+        "ANIM_PapelPicado_06",
+        "Calavera_de_papel_picado_06_Malla_calada"
+      ]
+    },
+    {
+      "id": "papel_picado_07",
+      "path": "C:\\Users\\Peque\\Documents\\Universidad\\Semestre_12\\MAC-IOS\\MAC-Proyecto_AltarAR\\Modelos\\Exported\\RCP_Separado_20261124_v1\\Animaciones_Individuales\\PapelPicado_07_Brisa.usdz",
+      "action": "PapelPicado_Brisa_07",
+      "loop": true,
+      "trigger": "automatico",
+      "selected_objects": [
+        "ANIM_PapelPicado_07",
+        "Calavera_de_papel_picado_07_Malla_calada"
+      ]
+    },
+    {
+      "id": "papel_picado_08",
+      "path": "C:\\Users\\Peque\\Documents\\Universidad\\Semestre_12\\MAC-IOS\\MAC-Proyecto_AltarAR\\Modelos\\Exported\\RCP_Separado_20261124_v1\\Animaciones_Individuales\\PapelPicado_08_Brisa.usdz",
+      "action": "PapelPicado_Brisa_08",
+      "loop": true,
+      "trigger": "automatico",
+      "selected_objects": [
+        "ANIM_PapelPicado_08",
+        "Calavera_de_papel_picado_08_Malla_calada"
+      ]
+    },
+    {
+      "id": "papel_picado_09",
+      "path": "C:\\Users\\Peque\\Documents\\Universidad\\Semestre_12\\MAC-IOS\\MAC-Proyecto_AltarAR\\Modelos\\Exported\\RCP_Separado_20261124_v1\\Animaciones_Individuales\\PapelPicado_09_Brisa.usdz",
+      "action": "PapelPicado_Brisa_09",
+      "loop": true,
+      "trigger": "automatico",
+      "selected_objects": [
+        "ANIM_PapelPicado_09",
+        "Calavera_de_papel_picado_09_Malla_calada"
+      ]
+    },
+    {
+      "id": "papel_picado_10",
+      "path": "C:\\Users\\Peque\\Documents\\Universidad\\Semestre_12\\MAC-IOS\\MAC-Proyecto_AltarAR\\Modelos\\Exported\\RCP_Separado_20261124_v1\\Animaciones_Individuales\\PapelPicado_10_Brisa.usdz",
+      "action": "PapelPicado_Brisa_10",
+      "loop": true,
+      "trigger": "automatico",
+      "selected_objects": [
+        "ANIM_PapelPicado_10",
+        "Calavera_de_papel_picado_10_Malla_calada"
+      ]
+    }
+  ]
+}
