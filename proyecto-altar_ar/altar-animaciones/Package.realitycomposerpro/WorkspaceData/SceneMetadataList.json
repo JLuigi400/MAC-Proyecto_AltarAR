@@ -4,8 +4,7 @@
       [
         "02C9F452-ED0E-424D-B699-3F124E8EDDEC",
         "Root",
-        "Timeline",
-        "Track"
+        "Mesa_Laboratorio_O"
       ],
       {
         "isExpanded" : true,
@@ -14,6 +13,16 @@
       [
         "02C9F452-ED0E-424D-B699-3F124E8EDDEC",
         "Root"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "02C9F452-ED0E-424D-B699-3F124E8EDDEC",
+        "Root",
+        "Timeline",
+        "Track"
       ],
       {
         "isExpanded" : true,
